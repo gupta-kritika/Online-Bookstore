@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="../css/style_login.css">
+    </head>
+    <script src="/static/jQuery.js"></script>
+    <script>
+      function check()
+      {
+          if(document.getElementById("user").value.length==0||
+          document.getElementById("pass").value.length==0)
+          {
+            event.preventDefault();
+                 alert("Fill the fields first!");
+          }
+         
+          else if(document.getElementById("user").value=="kritika"&&
+          document.getElementById("pass").value==123)
+          {
+            location.href="home_login.html";
+            alert("Successfully logged in");
+          }
+  
+          else if(document.getElementById("user").value!="kritika")
+          {
+            event.preventDefault();
+            alert("Invalid username!");
+          }
+  
+          else if(document.getElementById("pass").value!=123)
+          {
+            event.preventDefault();
+             alert("Invalid password!"); 
+          }
+  
+           document.getElementById("user").value="";
+           document.getElementById("pass").value=""; 
+      }
+      </script>
+              
+    <body background="../css/loginbg.png">
+        <div class="login-box">
+            <h2>Register</h2>
+            <form>
+              <div class="user-box">
+                <input type="text" name="" required="" id="user">
+                <label>Username</label>
+              </div>
+
+              <div class="user-box">
+                <input type="text" name="" required="" id="e-mail">
+                <label>E-mail</label>
+              </div>
+
+              <div class="user-box">
+                <input type="text" name="" required="" id="pass">
+                <label>Password</label>
+              </div>
+
+              <div class="user-box">
+                <input type="password" name="" required="" id="conf">
+                <label>Confirm Password</label>
+              </div>
+              <a href="#">
+                <a href="login.html" onclick="check()">Register</a>
+              </a>
+            </form>
+          </div>
+        </body>
+
+
+    </html>

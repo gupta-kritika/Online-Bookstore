@@ -1,0 +1,87 @@
+<!-- bookstore/templates/book_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/style.css" >
+</head>
+<script src="jQuery.js"></script>
+<script>
+	function showalert()
+	{
+		event.preventDefault();
+     alert("Login to your account first!");
+	}
+	</script>
+<body>
+  <div class="header">
+      <h1><b>Reader's Arena</b></h1>
+      <a href="login.html" title="Login to your profile"><b>Login</b></a>
+  </div>
+
+    <div class="container2">
+    <input placeholder="    Search......" class="search" type = "search"> 
+    <input class = "searchkrle" type = "button" value="">
+    </div>
+    <h2>BEST SELLERS</h2>
+    <div class="danda"></div>
+
+
+    <div class="card">
+  <img src="https://static.wikia.nocookie.net/harrypotter/images/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_%E2%80%93_Bloomsbury_2014_Children%27s_Edition_%28Paperback_and_Hardcover%29.jpg/revision/latest?cb=20170109041611" alt="" style="width:100%">
+  <div class="container3">
+    <h4><b>Harry Potter and the Philosphoser's Stone</b></h4>
+    <p>Price:Rs 352</p>
+  </div>
+</div>
+
+
+ <div class="card2">
+  <img src="https://cdn.kobo.com/book-images/fc350e01-1798-4dfd-941b-c04a42fd5727/1200/1200/False/srimad-bhagavad-gita-essence-1.jpg" alt="" style="width:100%">
+  <div class="container3">
+    <h4><b>The Bhagvad Gita</b></h4>
+    <p>Price:Rs 300</p>
+  </div>
+</div>
+
+<div class="card3">
+    <img src="https://m.media-amazon.com/images/I/41NHwJXCmnL.jpg" alt="" style="width:100%">
+    <div class="container3">
+      <h4><b>Money making skills by Warren Buffet </b></h4>
+      <p>Price:Rs 320</p>
+    </div>
+  </div>
+
+
+  <div class="card4">
+    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655361806i/61288753.jpg" alt="" style="width:100%">
+    <div class="container3">
+      <h4><b>The Law of Attraction</b></h4>
+      <p>Price:Rs 360</p>
+    </div>
+  </div>
+
+ 
+  <input type='button' class='bb' value="">
+
+
+
+    <div class='container'> 
+      <div class="fic"><a href="" id="genre" onclick="showalert()">Fiction</a></div>
+      <div class="roma"><a href="" id="genre">Romance</a></div> 
+      <div class="padhai"><a href="" id="genre">Science</a></div> 
+      <div class="ab"><a href="" id="genre">AutoBiographies</a></div> 
+      <div class="kids"><a href="" id="genre">Kids</a></div> 
+      <div class="thrill"><a href="" id="genre">Thriller</a></div> 
+      <div class="sports"><a href="" id="genre">Sports</a></div> 
+
+
+    </div>
+    
+   
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!-- bookstore/templates/book_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/style_homelogin.css" >
+</head>
+<script src="jQuery.js"></script>
+
+<script>
+function redirectToOtherPage3() {
+  var x=document.getElementById("cart");
+  if (x.style.display == "none") 
+{
+    x.style.display = "block";
+} 
+else 
+{
+    x.style.display = "none";
+}
+}
+</script>
+
+<script>
+  let shoppingCartCount = 0;
+  const cartItems = [];
+  let totalSum = 0;
+
+  function updateShoppingCart(bookName, imageUrl, price) {
+      shoppingCartCount++;
+      const shoppingCartIcon = document.getElementById('shopping-cart-icon');
+      shoppingCartIcon.innerHTML = ` ${shoppingCartCount}`;
+
+      cartItems.push({ name: bookName, image: imageUrl, price: price });
+
+      totalSum += price;
+      document.getElementById('totalSum').textContent = totalSum.toFixed(2);
+
+      const cartList = document.getElementById('cart-items');
+      const cartItem = document.createElement('li');
+      cartItem.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <div>
+                  <img src="${imageUrl}" alt="${bookName}" style="width: 40px; height: 50px;">
+                  <span style="font-size:0.5cm;">${bookName}</span>
+              </div>
+              <span style="font-size: 0.5cm; margin-left: auto;">Rs${price}</span>
+          </div>
+      `;
+      cartList.appendChild(cartItem);
+  }
+
+  function showCheckout() {
+    const checkoutContainer = document.getElementById('checkoutContainer');
+    checkoutContainer.style.display = 'block';
+}
+
+function placeOrder(event) {
+    event.preventDefault();
+    const orderConfirmation = document.getElementById('orderConfirmation');
+    orderConfirmation.style.display = 'block';
+}
+
+</script>
+
+<body>
+  <div class="header">
+      <h1><b>Reader's Arena</b></h1>
+      <input type="button" class="login" onclick="location.href='login.html'" title="Login">
+      <input type="button" class="review" onclick="location.href='review.html'" title="Submit a review!">
+      <input type="button" class="purchase" onclick="redirectToOtherPage3()" title="Checkout">
+      <div id="shopping-cart-icon" class="shopping-icon">0</div>
+      <div id="cart" style="display: none;">
+        <div class="cart">Cart</div> 
+        <br>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div style="margin-top: 15px; font-size: 0.7cm;" >
+            Total: Rs.<span id="totalSum">0.00</span>
+        </div>
+        <button onclick="showCheckout()">Checkout</button>
+        <div id="checkoutContainer" style="display: none;">
+            <form onsubmit="placeOrder(event)">
+                <!-- Add your form fields here -->
+                <input type="text" placeholder="Name" required="">
+                <br>
+                <input type="text" placeholder="Address" required="">
+                <br>
+                <input type="number" placeholder="Contact No." required="">
+                <br>
+                <select id="paymenttype" name="Payment option">
+                  <option value="Online">Netbanking</option>
+                  <option value="UPI">UPI</option>
+                  <option value="COD">Cash on Delivery</option>
+                </select>
+                <br>
+                <button type="submit" >Place Order</button>
+            </form>
+        </div>
+        <div id="orderConfirmation" class = "popup" style="display: none;">
+            <p>Your order has been placed. CHILLLL 🎉</p>
+        </div>
+    </div>
+  </div>
+
+
+    <div class="container2">
+    <input placeholder="    Search......" class="search" type = "search"> 
+    <input class = "searchkrle" type = "button" value="..">
+    </div>
+    <h2>BEST SELLERS</h2>
+    <div class="danda"></div>
+
+
+    <div class="card">
+  <img src="https://static.wikia.nocookie.net/harrypotter/images/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_%E2%80%93_Bloomsbury_2014_Children%27s_Edition_%28Paperback_and_Hardcover%29.jpg/revision/latest?cb=20170109041611" alt="" style="width:100%">
+  <div class="container3">
+    <h4><b>Harry Potter and the Philosphoser's Stone</b></h4>
+    <p>Price:Rs 352</p>
+  </div>
+  <input type="button" class="plus" onclick="updateShoppingCart('Harry Potter and the Philosopher\'s Stone','https://static.wikia.nocookie.net/harrypotter/images/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_%E2%80%93_Bloomsbury_2014_Children%27s_Edition_%28Paperback_and_Hardcover%29.jpg/revision/latest?cb=20170109041611',352.00)">
+</div>
+
+
+ <div class="card2">
+  <img src="https://cdn.kobo.com/book-images/fc350e01-1798-4dfd-941b-c04a42fd5727/1200/1200/False/srimad-bhagavad-gita-essence-1.jpg" alt="" style="width:100%">
+  <div class="container3">
+    <h4><b>The Bhagvad Gita</b></h4>
+    <p>Price:Rs 300</p>
+  </div>
+  <input type="button" class="plus2" onclick="updateShoppingCart('The Bhagvad Gita','https://cdn.kobo.com/book-images/fc350e01-1798-4dfd-941b-c04a42fd5727/1200/1200/False/srimad-bhagavad-gita-essence-1.jpg',300.00)">
+</div>
+
+<div class="card3">
+    <img src="https://m.media-amazon.com/images/I/41NHwJXCmnL.jpg" alt="" style="width:100%">
+    <div class="container3">
+      <h4><b>Money making skills by Warren Buffet </b></h4>
+      <p>Price:Rs 320</p>
+    </div>
+    <input type="button" class="plus3" onclick="updateShoppingCart('Money making skills by Warren Buffet','https://m.media-amazon.com/images/I/41NHwJXCmnL.jpg',320.00)">
+  </div>
+
+
+  <div class="card4">
+    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655361806i/61288753.jpg" alt="" style="width:100%">
+    <div class="container3">
+      <h4><b>The Law of Attraction</b></h4>
+      <p>Price:Rs 360</p>
+    </div>
+    <input type="button" class="plus4" onclick="updateShoppingCart('The Law Of Attraction','https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655361806i/61288753.jpg',360.00)">
+  </div>
+
+ 
+  <input type='button' class='bb' value="">
+
+
+
+    <div class='container'> 
+       <div class="fic"><a href="fiction.html" id="genre">Fiction</a></div>
+       <div class="roma"><a href="" id="genre">Romance</a></div> 
+       <div class="padhai"><a href="" id="genre">Science</a></div> 
+       <div class="ab"><a href="" id="genre">AutoBiographies</a></div> 
+       <div class="kids"><a href="" id="genre">Kids</a></div> 
+       <div class="thrill"><a href="" id="genre">Thriller</a></div> 
+       <div class="sports"><a href="" id="genre">Sports</a></div> 
+
+
+    </div>
+    
+   
+</body>
+</html>

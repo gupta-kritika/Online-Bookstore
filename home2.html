@@ -1,0 +1,194 @@
+<!-- bookstore/templates/book_list.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <div class="container2">
+    <input placeholder="    Search......" class="search" type = "search"> 
+    <input class = "searchkrle" type = "button">
+    </div>
+    <h2>BEST SELLERS</h2>
+    <div class="danda"></div>
+    <div id="shopping-cart-icon" class="shopping-icon">0</div>
+
+
+
+    <input type="button" class="login" onclick="redirectToOtherPage()">
+            
+
+    <input type="button" class="review" onclick="redirectToOtherPage2()">
+    <input type="button" class="purchase" onclick="redirectToOtherPage3()">
+    <div id="cart" style="display: none;">
+      <div class="cart">Cart</div>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div style="margin-top: 10px;">
+          Total: $<span id="totalSum">0.00</span>
+      </div>
+      <button onclick="showCheckout()">Checkout</button>
+      <div id="checkoutContainer" style="display: none;">
+          <!-- Checkout form or details -->
+          <!-- Example: -->
+          <form onsubmit="placeOrder(event)">
+              <!-- Add your form fields here -->
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Address">
+              <button type="submit">Place Order</button>
+          </form>
+      </div>
+      <div id="orderConfirmation" class = "popup" style="display: none;">
+          <p>Your order has been placed. CHILLLL 🎉</p>
+      </div>
+  </div>
+
+
+    <div class="card">
+  <img src="https://static.wikia.nocookie.net/harrypotter/images/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_%E2%80%93_Bloomsbury_2014_Children%27s_Edition_%28Paperback_and_Hardcover%29.jpg/revision/latest?cb=20170109041611" alt="" style="width:100%">
+  <div class="container3">
+    <h4><b>Harry Potter and the Philosphoser's Stone</b></h4>
+    <p>Price:Rs 0.00</p>
+  </div>
+  <input type="button" class="plus" onclick="updateShoppingCart('Harry Potter and the Philosopher\'s Stone','https://static.wikia.nocookie.net/harrypotter/images/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_%E2%80%93_Bloomsbury_2014_Children%27s_Edition_%28Paperback_and_Hardcover%29.jpg/revision/latest?cb=20170109041611',20.00)">
+</div>
+
+
+
+ <div class="card2">
+  <img src="https://cdn.kobo.com/book-images/fc350e01-1798-4dfd-941b-c04a42fd5727/1200/1200/False/srimad-bhagavad-gita-essence-1.jpg" alt="" style="width:100%">
+  <div class="container3">
+    <h4><b>The Bhagvad Gita</b></h4>
+    <p>Price:Rs 0.00</p>
+  </div>
+  <input type="button" class="plus2" onclick="updateShoppingCart('The Bhagvad Gita','https://cdn.kobo.com/book-images/fc350e01-1798-4dfd-941b-c04a42fd5727/1200/1200/False/srimad-bhagavad-gita-essence-1.jpg',10.00)">
+</div>
+
+<div class="card3">
+    <img src="https://m.media-amazon.com/images/I/41NHwJXCmnL.jpg" alt="" style="width:100%">
+    <div class="container3">
+      <h4><b>Money making skills by Warren Buffet </b></h4>
+      <p>Price:Rs 0.00</p>
+    </div>
+    <input type="button" class="plus3" onclick="updateShoppingCart('Money making skills by Warren Buffet','https://m.media-amazon.com/images/I/41NHwJXCmnL.jpg',25.00)">
+  </div>
+
+
+  <div class="card4">
+    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655361806i/61288753.jpg" alt="" style="width:100%">
+    <div class="container3">
+      <h4><b>The Law of Attraction</b></h4>
+      <p>Price:Rs 0.00</p>
+    </div>
+    <input type="button" class="plus4" onclick="updateShoppingCart('The Law Of Attraction','https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655361806i/61288753.jpg',5.00)">
+  </div>
+
+  <div class="card5">
+    <img src="https://m.media-amazon.com/images/I/41LMvi+N-iL.jpg" alt="" style="width:100%">
+    <div class="container3">
+      <h4><b>The Art Of Saying No</b></h4>
+      <p>Price:Rs 0.00</p>
+    </div>
+    <input type="button" class="plus5" onclick="updateShoppingCart('The Art Of Saying No','https://m.media-amazon.com/images/I/41LMvi+N-iL.jpg',8.00)">
+  </div>
+  <input type='button' class='bb'>
+
+
+
+    <div class='container'> 
+       <div class="fic" onclick="redirectToOtherPage4()">Fiction</div>
+       <div class="roma">Romance</div> 
+       <div class="padhai">Science</div> 
+       <div class="ab">AutoBiographies</div> 
+       <div class="kids">Kids</div> 
+       <div class="thrill">Thriller</div> 
+       <div class="sports">Sports</div> 
+
+
+    </div>
+    
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} - {{ book.author }} - ${{ book.price }}</li>
+        {% endfor %}
+    </ul>
+
+    <script>
+        function redirectToOtherPage() {
+            // Redirect to another page without changing the URL
+            window.location.href = '{% url 'login' %}';
+        }
+    </script>
+    <script>
+      function redirectToOtherPage2() {
+          // Redirect to another page without changing the URL
+          window.location.href = '{% url 'review' %}';
+      }
+  </script>
+  <script>
+    function redirectToOtherPage3() {
+        var x=document.getElementById("cart");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+    }
+</script>
+<script>
+  function redirectToOtherPage4() {
+      // Redirect to another page without changing the URL
+      window.location.href = '{% url 'fiction' %}';
+  }
+</script>
+<script>
+  
+  let shoppingCartCount = 0;
+  const cartItems = [];
+  let totalSum = 0;
+
+  function updateShoppingCart(bookName, imageUrl, price) {
+      shoppingCartCount++;
+      const shoppingCartIcon = document.getElementById('shopping-cart-icon');
+      shoppingCartIcon.innerHTML = ` ${shoppingCartCount}`;
+
+      cartItems.push({ name: bookName, image: imageUrl, price: price });
+
+      totalSum += price;
+      document.getElementById('totalSum').textContent = totalSum.toFixed(2);
+
+      const cartList = document.getElementById('cart-items');
+      const cartItem = document.createElement('li');
+      cartItem.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <div>
+                  <img src="${imageUrl}" alt="${bookName}" style="width: 40px; height: 50px;">
+                  <span style="font-size:0.5cm;">${bookName}</span>
+              </div>
+              <span style="font-size: 0.5cm; margin-left: auto;">Rs${price}</span>
+          </div>
+      `;
+      cartList.appendChild(cartItem);
+  }
+
+  function showCheckout() {
+    const checkoutContainer = document.getElementById('checkoutContainer');
+    checkoutContainer.style.display = 'block';
+}
+
+function placeOrder(event) {
+    event.preventDefault();
+    const orderConfirmation = document.getElementById('orderConfirmation');
+    orderConfirmation.style.display = 'block';
+}
+
+</script>
+
+    
+</body>
+</html>
