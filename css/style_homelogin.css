@@ -1,0 +1,365 @@
+/* static/bookstore/style.css */
+body {
+    background-color: rgb(218, 215, 228);
+    font-family: Arial, sans-serif;
+    margin:0;
+    
+}
+
+.header
+{
+background-color:grey;
+margin:0;
+padding:20px;
+height:2cm;
+width:850;
+text-align:center;
+}
+ 
+.header h1{
+color:white;
+float:left;
+font-size:120;
+display:inline;
+
+}
+
+.header a{
+float:right;
+color:white;
+display:inline;
+text-decoration: none;
+}
+
+.container{
+    background-color: rgb(230, 124, 4);
+    height: 23cm;
+    width: 18%;
+    /* border-radius: 1cm; */
+    margin-left: -0.2cm;
+    margin-top:0cm;
+    font-size: 0.7cm;
+}
+.container2{
+    position: absolute;
+    
+}
+.search{
+position: absolute;
+height: 1cm;
+width: 15cm;
+margin-left: 10cm;
+margin-top: 1cm;
+background-color:white;
+outline: none;
+border: none;
+}
+
+.searchkrle{
+position: absolute;
+margin-left: 24cm;
+height: 1cm;
+width: 1cm;
+border: none;
+background-image: url('https://amazonlistingservice.com/wp-content/uploads/2022/04/asset-4-2.png');
+outline: none;
+margin-top: 1cm;
+cursor: pointer;
+background-size: 100%;
+}
+.fic, .roma, .ab, .kids, .padhai, .sports, .thrill {
+    color: white;
+    height: 1.5cm;
+    width: 18%;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+}
+
+.fic
+{
+  margin-top: 3cm;
+ 
+}
+
+#genre
+{
+  text-decoration: none;
+  color:white;
+}
+
+.roma {
+    margin-top: 5cm;
+  
+}
+
+.ab {
+    margin-top: 7cm;
+ 
+}
+
+.kids {
+    margin-top: 9cm;
+   
+}
+
+.padhai {
+    margin-top: 11cm;
+   
+}
+
+.sports {
+    margin-top: 13cm;
+  
+}
+
+.thrill {
+    margin-top: 15cm;
+  
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:8cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container3 {
+    padding: 2px 8px;
+    position:absolute;
+    width:5cm;
+    height:5cm;
+  }
+  h2{
+    margin-left:7cm;
+    position:absolute;
+    margin-top:3.5cm;
+  }
+.danda{
+    width:27cm;
+    height:0.5px;
+    background-color: rgb(164, 167, 196);
+    position:absolute;
+    margin-top:5cm;
+    margin-left:6cm;
+
+}
+.card2 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:14cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card3 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:20cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card4 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:26cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card4:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card5 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:32cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card5:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .bb{
+  position:absolute;
+  margin-left:32cm;
+  margin-top:10.5cm;
+  outline:none;
+  border-radius:0.25cm;
+  height:1cm;
+  width:1cm;
+  border:none;
+  cursor:pointer;
+  background-image:url("https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-orange.png");
+  background-size:100%;
+  }
+
+  .login{
+    float:right;
+    margin-top:1cm;
+    background-image:url("https://t3.ftcdn.net/jpg/03/72/38/88/360_F_372388834_bUf3QEyES2fkPj0D7g0ZBMng2DuSgld7.jpg");
+    background-size:100%;
+    border-radius:1cm;
+    height:1.2cm;
+    width:1.2cm;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    }
+    .review{
+  
+   float:right;
+    margin-top:1cm;
+    background-image:url("https://cdn3.iconfinder.com/data/icons/feedback-review-3/48/19-512.png");
+    background-size:88%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius:1cm;
+    height:1.2cm;
+    width:1.2cm;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    }
+     .purchase{
+    
+   float:right;
+    margin-top:1cm;
+    background-image:url("https://w7.pngwing.com/pngs/509/669/png-transparent-amazon-com-online-shopping-computer-icons-shopping-cart-orange-macupdate-amazoncom-thumbnail.png");
+    background-size:100%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius:1cm;
+    height:1.2cm;
+    width:1.2cm;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    }
+    #cart{
+    width:15cm;
+    height:18cm;
+    background-color:aliceblue;
+    float:right;
+    margin-top:3cm;
+    margin-left: 15cm;
+    z-index:1;
+    position:absolute;
+    font-size:1cm;
+    font-family:'Times New Roman', Times, serif;
+    border: 10px black double;
+    }
+
+    .cart{
+    text-align: center;
+    font-size:1cm;
+    width:15cm;
+    font-family:'Times New Roman', Times, serif;
+    color:black ;
+    position:absolute;
+    }
+  
+    form{
+      width:15cm;
+    }
+
+    .shopping-icon{
+    margin-top: 1cm;
+    z-index: 1;
+    margin-left: 20cm;
+    width: 0.5cm;
+    height: 0.5cm;
+    background-color: white;
+    border-radius: 0.5cm;
+    float:right;
+    }
+  .plus,.plus2,.plus3,.plus4,.plus5{
+  background-image: url("https://icones.pro/wp-content/uploads/2021/04/nouvelle-icone-orange.png");
+  background-size:100%;
+  position:absolute;
+  border:none;
+  width:1cm;
+  height:1cm;
+  border-radius:1cm;
+  margin-top:9.7cm;
+  margin-left:-1cm;
+  
+  cursor: pointer;
+  
+  }
+  
+  .popup {
+      display: none;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      width:10cm;
+      height:5cm;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid black;
+      padding: 20px;
+      z-index: 1000;
+  }
+
+  .fic:hover,.ab:hover,.roma:hover,.padhai:hover,.kids:hover,.sports:hover,.thrill:hover
+  {
+    background-color: lightgoldenrodyellow;
+    color:black;
+  }
+
+  #genre:hover
+  {
+    color:black;
+  }
+
+  
+
+
