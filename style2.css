@@ -1,0 +1,326 @@
+/* static/bookstore/style.css */
+body {
+    background-color: rgb(218, 215, 228);
+    font-family: Arial, sans-serif;
+}
+
+
+.container{
+    background-color: rgb(216, 124, 4);
+    height: 20cm;
+    width: 6.25cm;
+    /* border-radius: 1cm; */
+    margin-left: -0.2cm;
+    margin-top:-0.25cm;
+    font-size: 0.7cm;
+}
+.container2{
+    position: absolute;
+}
+.search{
+position: absolute;
+height: 1cm;
+width: 15cm;
+margin-left: 14cm;
+margin-top: 1cm;
+background-color:white;
+outline: none;
+border: none;
+}
+
+.searchkrle{
+position: absolute;
+margin-left: 28cm;
+height: 1cm;
+width: 1cm;
+border: none;
+background-image: url('https://amazonlistingservice.com/wp-content/uploads/2022/04/asset-4-2.png');
+outline: none;
+margin-top: 1cm;
+cursor: pointer;
+background-size: 100%;
+}
+.fic, .roma, .ab, .kids, .padhai, .sports, .thrill {
+    color: white;
+    height: 1cm;
+    width: 2cm;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+}
+
+.fic {
+    margin-top: 3cm;
+    margin-left: 1.5cm;
+}
+
+.roma {
+    margin-top: 5cm;
+    margin-left: 1.2cm;
+}
+
+.ab {
+    margin-top: 7cm;
+    margin-left: 0.5cm;
+}
+
+.kids {
+    margin-top: 9cm;
+    margin-left: 1.7cm;
+}
+
+.padhai {
+    margin-top: 11cm;
+    margin-left: 1.4cm;
+}
+
+.sports {
+    margin-top: 13cm;
+    margin-left: 1.5cm;
+}
+
+.thrill {
+    margin-top: 15cm;
+    margin-left: 1.55cm;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:8cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container3 {
+    padding: 2px 8px;
+    position:absolute;
+    width:5cm;
+    height:6cm;
+  }
+  h2{
+    margin-left:7cm;
+    position:absolute;
+    margin-top:3.5cm;
+  }
+.danda{
+    width:33.4cm;
+    height:0.5px;
+    background-color: rgb(164, 167, 196);
+    position:absolute;
+    margin-top:5cm;
+    margin-left:6cm;
+
+}
+.card2 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:14cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card3 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:20cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card4 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:26cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card4:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card5 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left:32cm;
+    position:absolute;
+    margin-top:6.5cm;
+    background-size:100%;
+    width:5cm;
+    height:11cm;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card5:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .bb{
+  position:absolute;
+  margin-left:38cm;
+  margin-top:10.5cm;
+  outline:none;
+  border-radius:0.25cm;
+  height:1cm;
+  width:1cm;
+  border:none;
+  cursor:pointer;
+  background-image:url("https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-orange.png");
+  background-size:100%;
+  }
+  .login{
+  position:absolute;
+  margin-left:36cm;
+  margin-top:1cm;
+  background-image:url("https://t3.ftcdn.net/jpg/03/72/38/88/360_F_372388834_bUf3QEyES2fkPj0D7g0ZBMng2DuSgld7.jpg");
+  background-size:100%;
+  border-radius:1cm;
+  height:1.2cm;
+  width:1.2cm;
+  outline:none;
+  border:none;
+  cursor: pointer;
+  }
+  .review{
+  position:absolute;
+  margin-left:34.5cm;
+  margin-top:1cm;
+  background-image:url("https://cdn3.iconfinder.com/data/icons/feedback-review-3/48/19-512.png");
+  background-size:88%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius:1cm;
+  height:1.2cm;
+  width:1.2cm;
+  outline:none;
+  border:none;
+  cursor: pointer;
+  }
+   .purchase{
+  position:absolute;
+  margin-left:37.5cm;
+  margin-top:1cm;
+  background-image:url("https://w7.pngwing.com/pngs/509/669/png-transparent-amazon-com-online-shopping-computer-icons-shopping-cart-orange-macupdate-amazoncom-thumbnail.png");
+  background-size:100%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius:1cm;
+  height:1.2cm;
+  width:1.2cm;
+  outline:none;
+  border:none;
+  cursor: pointer;
+  }
+  #cart{
+  width:15cm;
+  height:17.5cm;
+  background-color: rgb(216, 124, 4);
+  position:absolute;
+  margin-top:1cm;
+  margin-left:22cm;
+  z-index:1;
+  
+  font-size:1cm;
+  font-family:'Times New Roman', Times, serif;
+  border:double;
+  }
+  .cart{
+  text-align: center;
+  font-size:1cm;
+  font-family:'Times New Roman', Times, serif;
+  color:white ;
+
+  }
+
+  .shopping-icon{
+  position: absolute;
+  margin-left: 38.5cm;
+  margin-top: 1cm;
+  z-index: 1;
+  width: 0.5cm;
+  height: 0.5cm;
+  background-color: white;
+  border-radius: 0.5cm;
+  text-align: center;
+  }
+.plus,.plus2,.plus3,.plus4,.plus5{
+background-image: url("https://icones.pro/wp-content/uploads/2021/04/nouvelle-icone-orange.png");
+background-size:100%;
+position:absolute;
+border:none;
+width:1cm;
+height:1cm;
+border-radius:1cm;
+margin-top:9.7cm;
+margin-left:-1cm;
+
+cursor: pointer;
+
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 1000;
+}
+/* .plus{
+margin-left:2cm;
+}
+  .plus2{
+margin-left:14cm;
+}
+  .plus{
+margin-left:20cm;
+}
+  .plus{
+margin-left:26cm;
+}
+  .plus{
+margin-left:32cm;
+} */
+  
+ 
