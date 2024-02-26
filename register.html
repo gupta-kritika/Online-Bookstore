@@ -188,10 +188,12 @@
          
         else if(document.getElementById("conf").value!=document.getelementyId("pass").value)
         {
+            event.preventDefault();
             alert("Recheck Password!");
         }
           else
         {
+            event.preventDefault();
             alert("Succesfully Registered");
             location.href="index.html";
         }
