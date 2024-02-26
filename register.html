@@ -186,25 +186,15 @@
                  alert("Fill the fields first!");
           }
          
-          else if(document.getElementById("user").value=="kritika"&&
-          document.getElementById("pass").value==123)
-          {
-            location.href="home_login.html";
-            alert("Successfully logged in");
-          }
-  
-          else if(document.getElementById("user").value!="kritika")
-          {
-            event.preventDefault();
-            alert("Invalid username!");
-          }
-  
-          else if(document.getElementById("pass").value!=123)
-          {
-            event.preventDefault();
-             alert("Invalid password!"); 
-          }
-  
+        else if(document.getElementById("conf").value!=document.getelementyId("pass"))
+        {
+            alert("Recheck Password!");
+        }
+          else
+        {
+            alert("Succesfully Registered");
+            location.href="index.html";
+        }
            document.getElementById("user").value="";
            document.getElementById("pass").value=""; 
       }
@@ -234,7 +224,7 @@
                 <label>Confirm Password</label>
               </div>
               <a href="#">
-                <a href="login.html" onclick="check()">Register</a>
+                <a href="index.html" onclick="check()">Register</a>
               </a>
             </form>
           </div>
